@@ -1,8 +1,6 @@
-import { Link } from '@tanstack/react-router'
+import { Link } from '@tanstack/react-router';
 
-import BetterAuthHeader from './src/integrations/better-auth/header-user.tsx'
-
-import { useState } from 'react'
+import { useState } from 'react';
 import {
   ChevronDown,
   ChevronRight,
@@ -14,13 +12,13 @@ import {
   SquareFunction,
   StickyNote,
   X,
-} from 'lucide-react'
+} from 'lucide-react';
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   const [groupedExpanded, setGroupedExpanded] = useState<
     Record<string, boolean>
-  >({})
+  >({});
 
   return (
     <>
@@ -216,9 +214,9 @@ export default function Header() {
         </nav>
 
         <div className="p-4 border-t border-gray-700 bg-gray-800 flex flex-col gap-2">
-          <BetterAuthHeader />
+          {/* <BetterAuthHeader /> */}
         </div>
       </aside>
     </>
-  )
+  );
 }
